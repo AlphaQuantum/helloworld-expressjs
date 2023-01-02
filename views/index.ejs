@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Express</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <h4>Some content</h4>
+    <!--This syntax here is for code-->
+    <p>The result is calculated by the server: 2+2=<%=2+2%></p>
+    <!--Why do we use "locals."?-->
+    <!--locals is always defined, so if the text is not
+    sent from the server, this will wither render nothing
+    or tell him to render what you want-->
+    <%= locals.text || 'There was some error'%>
+
+    <h4>The structure of this website</h4>
+    <ul>
+        <li><a href="http://localhost:3000/">/index</a></li>
+        <li><a href="http://localhost:3000/users">/users</a></li>
+        <li><a href="http://localhost:3000/users/1">/users/id</a></li>
+    </ul> 
+</body>
+</html>
